@@ -86,7 +86,7 @@ class Grid
      * Constructor
      * @param string $id Id of grid
      */
-    private function __construct($id)
+    protected function __construct($id)
     {
         if (trim($id) === '')
         {
