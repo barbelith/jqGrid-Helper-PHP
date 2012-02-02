@@ -11,7 +11,6 @@ class Grid
     private $_caption;
     private $_columns = array();
     private $_dataType = 'json';
-    private $_JsonReader = array('repeatitems' => 'false', 'id' => 0);
     private $_emptyRecords;
     private $_footerRow;
     private $_forceFit;
@@ -1487,11 +1486,6 @@ class Grid
 
         // Datatype
         $Script .= "datatype: '" . $this->_dataType . "' ," . "\n";
-
-        if ($this->_dataType === 'json')
-        {
-            $Script .= "jsonReader: {repeatitems: false, id: '" . $this->_JsonReader['id'] . "'} ," . "\n";
-        }
 
         // Emptyrecords
         if ($this->_emptyRecords) $Script .= "emptyrecords: '" . $this->_emptyRecords . "'," . "\n";
